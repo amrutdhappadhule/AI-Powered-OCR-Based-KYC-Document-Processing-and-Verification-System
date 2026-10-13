@@ -1,0 +1,61 @@
+# Virtual environments
+.venv/
+venv/
+env/
+myenv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Test and coverage files
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE and editor settings
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Uploaded KYC documents and sensitive data
+uploads/
+input/
+output/
+reports/
+data/
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+*.bmp
+
+# Generated exports
+*.csv
+*.xlsx
+
+# Temporary files
+*.tmp
+*.bak
+
+# Office temporary files
+~$*
+~WRL*.tmp
+
+# Video files
+*.mp4
