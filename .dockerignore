@@ -1,0 +1,22 @@
+.venv/
+venv/
+**pycache**/
+_.py[cod]
+.git/
+.github/
+.env
+.env._
+!.env.example
+.pytest_cache/
+
+# Documentation not required at runtime
+
+\*.docx
+
+# Video files not required at runtime
+
+_.mp4
+_.mov
+_.avi
+_.mkv
+\*.webm

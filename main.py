@@ -5,8 +5,24 @@ import streamlit as st
 from PIL import Image
 import json
 
-# Maintain your explicit tesseract configuration execution path
-pytesseract.pytesseract.tesseract_cmd = r"C:\Users\amrut\AppData\Local\Programs\Tesseract-OCR\tesseract.exe"
+import os
+import shutil
+
+tesseract_path = shutil.which("tesseract")
+
+if tesseract_path:
+    pytesseract.pytesseract.tesseract_cmd = tesseract_path
+else:
+    # Optional Windows fallback for local development
+    windows_path = (
+        r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    )
+
+    if os.path.exists(windows_path):
+        pytesseract.pytesseract.tesseract_cmd = windows_path
+
+# # Maintain your explicit tesseract configuration execution path
+# pytesseract.pytesseract.tesseract_cmd = r"C:\Users\amrut\AppData\Local\Programs\Tesseract-OCR\tesseract.exe"
 
 # ----------------- STREAMLIT PAGE CONFIGURATION -----------------
 st.set_page_config(
