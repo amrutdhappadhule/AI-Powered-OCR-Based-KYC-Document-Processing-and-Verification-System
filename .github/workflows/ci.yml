@@ -27,10 +27,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+
+
+
+
 # 3.3 Understand what each part does
 #YAML setting	Purpose
 #name	Names the workflow in GitHub Actions.
-#on	Defines when it runs: on pushes and pull requests targeting main.
+# on	Defines when it runs: on pushes and pull requests targeting main.
 #jobs	Defines the work GitHub should perform.
 #runs-on	Requests a GitHub-hosted Ubuntu runner.
 #checkout	Downloads your repository code into the runner.
