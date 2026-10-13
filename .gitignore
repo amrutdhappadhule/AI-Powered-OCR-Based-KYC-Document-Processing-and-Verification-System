@@ -59,3 +59,8 @@ data/
 
 # Video files
 *.mp4
+
+
+# Word documents
+*.docx
+~$*
