@@ -62,7 +62,8 @@ jobs:
       - name: Deploy to Azure Container Apps
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          az extension add --name containerapp --upgrade
+          az account show --output table
+          az containerapp list --resource-group kyc-cicd --output table
           az containerapp update \
             --name kyc-ocr-app \
             --resource-group kyc-cicd \
