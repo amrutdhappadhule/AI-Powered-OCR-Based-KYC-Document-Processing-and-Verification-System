@@ -567,7 +567,7 @@ st.markdown("""
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <div>
             <h2 style="margin: 0; padding: 0; font-weight: 700;">Automated KYC Verification Portal</h2>
-            <p style="margin: 4px 0 0 0; opacity: 0.85; font-size: 14px;">Automated document parsing and identity verification system.</p>
+            <p style="margin: 4px 0 0 0; opacity: 0.85; font-size: 14px;">AI-Powered OCR-Based KYC Document Processing and Verification System.</p>
         </div>
     </div>
 </div>
