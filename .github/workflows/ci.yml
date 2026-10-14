@@ -58,3 +58,12 @@ jobs:
 
           docker push kycsystem.azurecr.io/kyc-ocr-app:${{ github.sha }}
           docker push kycsystem.azurecr.io/kyc-ocr-app:latest
+
+      - name: Deploy to Azure Container Apps
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          az extension add --name containerapp --upgrade
+          az containerapp update \
+            --name kyc-ocr-app \
+            --resource-group kyc-cicd \
+            --image kycsystem.azurecr.io/kyc-ocr-app:${{ github.sha }}
